@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square{
+    position: relative;
+    top: 50px;
+    left: 550px;
+    height: 250px;
+    width: 400px;
+    background-color: rgb(69, 157, 69);
+    border-radius: 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 83, 0);
+    height: 60px;
+    width: 100%;
+}
+.navbar-1{
+    display: flex;
+    color: white;
+    font-weight: 900;
+    font-size: 28px;
+    justify-content: space-evenly;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+p{
+    margin: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-1">
+            <p style="position: relative;right:400px;"><a href="#">Great Quotes</a></p>
+            <p style="position: relative;left:250px;"><a href="http://localhost:8000/">All Quotes</a></p>
+            <p style="position: relative;left:350px;"><a href="http://localhost:8080/">New Quotes</a></p>
+        </div>
+    </div>
+
+    <% userList.forEach(user=>{%>
+            <p style="font-size: 20px;"><%=user.title%></p>
+            <p style="font-size: 15px;">~ <%=user.content%></p>
+    <%})%>
+
+</body>
+</html>

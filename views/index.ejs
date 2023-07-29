@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square{
+    position: relative;
+    top: 50px;
+    left: 550px;
+    height: 250px;
+    width: 400px;
+    background-color: rgb(69, 157, 69);
+    border-radius: 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 83, 0);
+    height: 60px;
+    width: 100%;
+}
+.navbar-1{
+    display: flex;
+    color: white;
+    font-weight: 900;
+    font-size: 28px;
+    justify-content: space-evenly;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.main{
+    height: 90px;
+    width: 650px;
+    position: relative;
+    left: 450px;
+    top: 20px;
+    background-color:skyblue;
+    margin: 20px;
+}
+p{
+  position: relative;
+  right: 80px;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-1">
+            <p style="position: relative;right:400px;"><a href="#">Great Quotes</a></p>
+            <p style="position: relative;left:250px;"><a href="http://localhost:8000/">All Quotes</a></p>
+            <p style="position: relative;left:350px;"><a href="http://localhost:8080/">Add Quotes</a></p>
+        </div>
+    </div>
+    <h1>All Quotes</h1>
+    <% userList.forEach(user=>{%>
+    <div class="main">
+            <p style="font-size: 35px;font-weight: 700;text-align: center;position: relative;top: 9px;"><%=user.title%></p>
+            <p style="font-size: 20px;text-align: center;position: relative;top: 15px;">~ <%=user.content%></p>
+            <a style="width:120px;position: relative;bottom: 2px; left: 470px; bottom: 45px;height: 45px;background-color: green;color: white;" href="http://localhost:8000/jain">View Full Quote</a>
+    </div>
+    <%})%>
+    
+</body>
+</html>
