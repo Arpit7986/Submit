@@ -51,7 +51,15 @@ app.get('/',(req,res)=>{
          
            
     })
-
+    app.get('/j',(req,res)=>{
+    
+        User.find().then((user)=>{
+            res.render('arpit',{
+                userList:user
+            })})
+         
+           
+    })
 
 
 
@@ -98,9 +106,9 @@ app.get('/',(req,res)=>{
         res.redirect('/')
     })
     
-    
+    const router=require('./routes/route')
 
-
+app.use('/ajay',router)
 
 app.listen(8000,()=>{
     console.log("Server Connected Successfully");
