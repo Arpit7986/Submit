@@ -35,7 +35,7 @@ app.get('/',(req,res)=>{
 })
    
     // res.redirect('/')
-    app.get('/jain',(req,res)=>{
+    app.get('/ranjana',(req,res)=>{
     
         User.find().then((user)=>{
             res.render('main',{
@@ -44,15 +44,15 @@ app.get('/',(req,res)=>{
          
            
     })
-    app.get('/j',(req,res)=>{
+    // app.get('/j',(req,res)=>{
     
-        User.find().then((user)=>{
-            res.render('arpit',{
-                userList:user
-            })})
+    //     User.find().then((user)=>{
+    //         res.render('arpit',{
+    //             userList:user
+    //         })})
          
            
-    })
+    // })
 
 
 
@@ -99,6 +99,11 @@ app.get('/',(req,res)=>{
         res.redirect('/')
     })
     
+    // app.get('/ajay',(req,res)=>{
+    //     res.render('arpit')
+    // })
+
+
     const router=require('./routes/route')
 
 app.use('/ajay',router)
