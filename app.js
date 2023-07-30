@@ -4,7 +4,7 @@ const ejs=require('ejs')
 const mongoose=require('mongoose')
 app.set('view engine','ejs')
 
-mongoose.connect('mongodb://127.0.0.1:27017/Maruti')
+mongoose.connect(process.env.DB_URL)
 var db=mongoose.connection
 db.on('error',()=>{
     console.log("Error in connection");
@@ -71,7 +71,7 @@ app.get('/',(req,res)=>{
     app.use(express.urlencoded({extended:true}))
     app.use(bodyParser.urlencoded({extended:true}))
     
-    mongoose.connect('mongodb://127.0.0.1:27017/Maruti')
+    mongoose.connect(process.env.DB_URL)
     var db=mongoose.connection
     db.on('error',()=>{
         console.log("Error in connection");
