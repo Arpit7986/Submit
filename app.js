@@ -35,7 +35,7 @@ app.get('/',(req,res)=>{
 })
    
     // res.redirect('/')
-    app.get('/ranjana',(req,res)=>{
+    app.get('/jain',(req,res)=>{
     
         User.find().then((user)=>{
             res.render('main',{
