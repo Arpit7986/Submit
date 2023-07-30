@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express=require('express')
 const app=express()
 const ejs=require('ejs')
@@ -109,7 +110,7 @@ app.get('/',(req,res)=>{
     const router=require('./routes/route')
 
 app.use('/ajay',router)
-
-app.listen(8000,()=>{
-    console.log("Server Connected Successfully");
+const port=process.env.PORT || 8000
+app.listen(port,()=>{
+    console.log(`Server Connected Successfully ${port}`);
 })
