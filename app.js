@@ -23,15 +23,7 @@ const userSchema={
 const User=mongoose.model('User',userSchema)
 
 
-app.get('/',(req,res)=>{
-    
-    User.find().then((user)=>{
-        res.render('index',{
-            userList:user
-        })})
-     
-       
-})
+
 app.get('/',(req,res)=>{
     
     User.find().then((user)=>{
